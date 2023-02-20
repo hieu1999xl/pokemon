@@ -35,28 +35,28 @@ const MyPokemon = () => {
   };
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center">
-        <div className="flex flex-col">
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="overflow-hidden">
+    <div className="container">
+      <div className="row">
+        <div className="col s12 offset-l2 m12 l6">
+          <div className="">
+            <div className="">
+              <div className="">
                 {pokemonCaught && pokemonCaught.length > 0 ? (
                   <table className="min-w-full">
                     <thead className="border-b">
                       <tr>
-                        <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                          #
+                        <th scope="col" className="">
+                          My Pokemon
                         </th>
-                        <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left"></th>
-                        <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left"></th>
+                        <th scope="col" className=""></th>
+                        <th scope="col" className=""></th>
                         {releasePokemonAllParam && (
-                          <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                          <th scope="col" className="">
                             <button
                               onClick={() => {
                                 setOpenModal(true);
                               }}
-                              className="flex items-center justify-center border border-transparent rounded-md bg-rose-600 p-2 smS:p-[3px] text-base font-medium text-white hover:bg-rose-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                              className=""
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -79,36 +79,38 @@ const MyPokemon = () => {
                     </thead>
                     <tbody>
                       {pokemonCaught.map((item: PokemonResponse, idx: number) => (
-                        <tr className="border-b cursor-pointer" key={JSON.stringify(item)}>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{idx + 1}</td>
+                        <tr className="tr-pokemon" key={JSON.stringify(item)}>
+                          <td className="">{idx + 1}</td>
                           <td
-                            className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap w-[20%] smS:w-full"
+                            className=""
                             onClick={() => navigateDetail(item.generalInformation.name)}
                           >
-                            <div className="lazyload-wrapper flex">
-                              <LazyLoadImage
+                            <div className="">
+                              <LazyLoadImage width={90}
                                 src={`${IMAGE_URL}/${item.id}.png`}
                                 alt={`${item.generalInformation.name}`}
                               />
                             </div>
                           </td>
-                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <td className="">
                             <div>
-                              <div className="font-sans font-light ">{item.generalInformation.name}</div>
-                              <p className="font-bold font-oswald text-xl">{item.nameOwner}</p>
+                              <div style={{fontWeight: 900}}>{item.generalInformation.name}</div>
+                              <div className="">{item.nameOwner}</div>
                             </div>
                           </td>
-                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <td className="">
                             <button
                               onClick={() => {
                                 setOpenModal(true);
                                 setPokemonRelease(item.generalInformation.name);
                               }}
-                              className="flex items-center justify-center border border-transparent rounded-md bg-rose-600 p-2 smS:p-[3px] text-base font-medium text-white hover:bg-rose-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                              className="waves-effect waves-light btn button-mypokemon"
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
+                                color='#fff'
+                                width="1.5rem"
                                 viewBox="0 0 24 24"
                                 strokeWidth="1.5"
                                 stroke="currentColor"

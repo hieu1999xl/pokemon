@@ -288,6 +288,20 @@ nav ul a {
   justify-content: center;
 }
 
+.button-mypokemon {
+  display: flex;
+  align-items: center;
+}
+
+
+.tr-pokemon:nth-child(1) {
+  border-top: .5px solid #ccc;
+}
+
+.tr-pokemon {
+  border-bottom: .5px solid #ccc;
+}
+
 .block-detail {
   margin-bottom: 20px;
 }
