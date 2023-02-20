@@ -1,12 +1,12 @@
 body {
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-
 tr {
   border-bottom: none;
 }
 
-#logo-container {
+.logo-container {
   text-align: center;
   padding: 15px;
   height: 64px;
@@ -259,6 +259,39 @@ nav ul a {
   padding-top: 62px;
 }
 
+.name_detail {
+  font-weight: 500;
+  padding-bottom: 6px;
+}
+
+.flex-types {
+  display: flex;
+}
+
+.name-owned {
+  font-size: 16px;
+}
+
+.button-types {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.375rem;
+  color: #fff;
+  margin-right: 0.75rem;
+}
+
+.dataloading-box {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.block-detail {
+  margin-bottom: 20px;
+}
+
 .details-tabs {
   max-width: 700px;
   display: block;
@@ -305,7 +338,7 @@ td.abilities {
     left:28%;
   }
   .info-block-2 .pokebola{
-    left: 46%; 
+    /* left: 46%;  */
   }
   .info-block-2 span {
     margin-top: 0;

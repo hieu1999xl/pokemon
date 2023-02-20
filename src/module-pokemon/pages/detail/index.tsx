@@ -33,7 +33,6 @@ const PokemonDetail = () => {
     pokemonCaught: state.pokemon.data.pokemonCaught,
   }));
 
-
   const isOwner = useMemo(() => {
     if (canCatchUp) {
       return true;
@@ -88,15 +87,16 @@ const PokemonDetail = () => {
     setCanCatchUp(false);
     setPokeAdmin(imgPokeThrow);
   };
-  
-const typePokemon = pokemonInformation[0].tags
+
+  const typePokemon = pokemonInformation[0].tags;
 
   return (
     <div>
-
       <div className="bg-white py-24">
         <DataLoading isLoading={isLoading}>
-          <div className={`pokemon-info ${typePokemon?.slice(0,1) ? typePokemon?.slice(0,1)  : typePokemon?.slice(1) }`}>
+          <div
+            className={`pokemon-info ${typePokemon?.slice(0, 1) ? typePokemon?.slice(0, 1) : typePokemon?.slice(1)}`}
+          >
             <div className="row">
               <div className="col s12 m5 l4 info-block-1">
                 <h5>Information</h5>
@@ -106,9 +106,7 @@ const typePokemon = pokemonInformation[0].tags
                       {feature.tags && (
                         <>
                           {feature.tags.map((i, idx) => (
-                            <span>
-                              {i}
-                            </span>
+                            <span>{i}</span>
                           ))}
                         </>
                       )}
@@ -117,7 +115,6 @@ const typePokemon = pokemonInformation[0].tags
                 </div>
               </div>
               <div className="col s12 m7 l8 info-block-2">
-                <span>1</span>
                 <div className="lazyload-wrapper">
                   <LazyLoadImage
                     src={`${IMAGE_URL}/${pokemonData.id}.png`}
@@ -126,64 +123,61 @@ const typePokemon = pokemonInformation[0].tags
                 </div>
                 <div className="pokebola">
                   <svg width={256} height={256} viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M189.714 140.516C185.061 170.342 159.184 193.178 127.918 193.178C96.6531 193.178 70.7755 170.342 66.1224 140.516H0C6.28571 205.288 61.2245 256 128 256C194.776 256 249.633 205.288 256 140.516H189.714Z" fill="white" fillOpacity="0.4" />
-                    <path d="M128 175.787C154.51 175.787 176 154.392 176 128C176 101.608 154.51 80.2133 128 80.2133C101.49 80.2133 80 101.608 80 128C80 154.392 101.49 175.787 128 175.787Z" fill="white" fillOpacity="0.4" />
-                    <path d="M67.3469 115.484C74.2857 88.5841 98.7755 68.673 128 68.673C157.224 68.673 181.714 88.5841 188.571 115.484H255.918C249.633 50.7124 194.694 0 128 0C61.2245 0 6.28571 50.7124 0 115.484H67.3469Z" fill="white" fillOpacity="0.4" />
+                    <path
+                      d="M189.714 140.516C185.061 170.342 159.184 193.178 127.918 193.178C96.6531 193.178 70.7755 170.342 66.1224 140.516H0C6.28571 205.288 61.2245 256 128 256C194.776 256 249.633 205.288 256 140.516H189.714Z"
+                      fill="white"
+                      fillOpacity="0.4"
+                    />
+                    <path
+                      d="M128 175.787C154.51 175.787 176 154.392 176 128C176 101.608 154.51 80.2133 128 80.2133C101.49 80.2133 80 101.608 80 128C80 154.392 101.49 175.787 128 175.787Z"
+                      fill="white"
+                      fillOpacity="0.4"
+                    />
+                    <path
+                      d="M67.3469 115.484C74.2857 88.5841 98.7755 68.673 128 68.673C157.224 68.673 181.714 88.5841 188.571 115.484H255.918C249.633 50.7124 194.694 0 128 0C61.2245 0 6.28571 50.7124 0 115.484H67.3469Z"
+                      fill="white"
+                      fillOpacity="0.4"
+                    />
                   </svg>
                 </div>
               </div>
             </div>
-
-          </div>
-          <div>
-            <div>
-              <h2>
-                {formatUpperCaseFirstLetter(pokemonData.generalInformation.name)}
-                {isOwner && (
-                  <NavLink to={`/${ROUTES.MY_POKEMON}`}>
-                    <span >
-                      Owned
-                    </span>
-                  </NavLink>
-                )}
-              </h2>
-              {pokemonInformation.map(feature => (
-                <div key={feature.name}>
-                  <div>{feature.name}</div>
-                  {feature.description && <div>{feature.description}</div>}
-                  {feature.tags && (
-                    <div className={feature.name === 'Moves' ? '' : 'flex'}>
-                      {feature.tags.map((i, idx) => (
-                        <div key={idx}>
-                          {i}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-            </div>
-            <div>
-              <div>
-                <div>
-                  <div>
+            <div className="row details">
+              <div className="col s12">
+                <div className="details-tabs">
+                  <div className="col s12">
                     <div>
-                      <LazyLoadImage
-                        src={`${IMAGE_URL}/${pokemonData.id}.png`}
-                        alt={`${pokemonData.generalInformation.name}`}
-                      />
+                      <h2>
+                        {formatUpperCaseFirstLetter(pokemonData.generalInformation.name)}
+                        {isOwner && (
+                          <NavLink to={`/${ROUTES.MY_POKEMON}`}>
+                            <span className='name-owned'>Owned</span>
+                          </NavLink>
+                        )}
+                      </h2>
+
+                      <div className="">
+                        {pokemonInformation.map(feature => (
+                          <div key={feature.name} className="col s12 m6 l6 block-detail">
+                            <div className="name_detail">{feature.name}</div>
+                            {feature.description && <div className="">{feature.description}</div>}
+                            {feature.tags && (
+                              <div className={feature.name === 'Moves' ? '' : 'flex-types'}>
+                                {feature.tags.map((i, idx) => (
+                                  <div key={idx}  className={`button-types pokemon-info ${typePokemon?.slice(0, 1) ? typePokemon?.slice(0, 1) : typePokemon?.slice(1)}`}>
+                                    {i}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
+                    <div >{!isOwner && <button className="waves-effect waves-light btn" onClick={handleCatchUp}>Catch Pokemon</button>}</div>
                   </div>
                 </div>
               </div>
-              {!isOwner && (
-                <button
-                  onClick={handleCatchUp}
-                >
-                  Catch Pokemon
-                </button>
-              )}
             </div>
           </div>
         </DataLoading>

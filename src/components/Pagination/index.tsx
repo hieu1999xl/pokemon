@@ -15,20 +15,22 @@ const Pagination = ({ page, handleChangePage }: PaginationProps) => {
   };
 
   return (
-    <div className="flex mt-20 justify-end mx-20">
+    <div className="row">
+    <div className="col">
       <button
         disabled={page === 0}
         onClick={() => changePage('PREV')}
-        className="relative inline-flex items-center rounded-md text-white bg-rose-600 px-4 py-2 text-sm font-medium disabled:opacity-75 enabled:hover:text-gray-700 enabled:hover:bg-white"
+        className="waves-effect waves-light btn"
       >
         Previous
       </button>
       <button
         onClick={() => changePage('NEXT')}
-        className="relative ml-3 inline-flex items-center rounded-md text-white bg-rose-600 px-4 py-2 text-sm font-medium  hover:text-gray-700 hover:bg-white"
+        className="waves-effect waves-light btn"
       >
         Next
       </button>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import { Header, Footer } from '../index';
+import { Header } from '../index';
 import { useEffect } from 'react';
 
 const AppLayout = () => {
@@ -14,7 +14,6 @@ const AppLayout = () => {
         <main>
           <Outlet />
         </main>
-        <Footer />
       </div>
     </div>
   );

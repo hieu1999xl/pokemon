@@ -11,7 +11,7 @@ const Introduction = () => {
     <div className="container">
     <div className="row">
       <div className="col s12">
-        <div id="pokemon-list">
+        <div>
           <div className="pokeball-background">
             <svg width={387} height={394} viewBox="0 0 387 394" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M322.607 199.291C303.385 240.288 256.532 262.31 211.508 249.183C166.485 236.057 138.808 192.306 144.629 147.402L49.41 119.641C31.2678 215.555 89.091 311.649 185.251 339.684C281.411 367.719 381.699 317.722 418.062 227.12L322.607 199.291Z" fill="#F1F0F0" />
