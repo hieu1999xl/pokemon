@@ -9,7 +9,7 @@ const AppLayout = () => {
 
   return (
     <div id="main_page">
-      <div className={'pt-24 bg_landing overflow-hidden'}>
+      <div className={'overflow-hidden'}>
         <Header />
         <main>
           <Outlet />

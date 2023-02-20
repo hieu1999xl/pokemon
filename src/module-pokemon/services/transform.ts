@@ -31,8 +31,7 @@ export const transformPokemonListResponse = (resp: string) => {
   const { results, count } = parseData;
 
   const totalPage = count === 0 ? 0 : Math.trunc((count - 1) / DEFAULT_PAGE_SIZE) + 1;
-  
-  
+
   let listData: PaginableData<PokemonListResponse> = {
     data: results.map(i => {
       return {
