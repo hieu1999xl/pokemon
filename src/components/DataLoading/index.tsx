@@ -8,7 +8,7 @@ const DataLoading = ({ children, isLoading }: DataLoadingProps) => {
     <>
       {isLoading ? (
         <div className="dataloading-box">
-          <img src="../assets/img/pokemon-loading.gif" className="w-40 m-auto" />
+          <img src="../assets/img/pokemon-loading.gif" />
         </div>
       ) : (
         children

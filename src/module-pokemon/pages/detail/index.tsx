@@ -91,8 +91,8 @@ const PokemonDetail = () => {
   const typePokemon = pokemonInformation[0].tags;
 
   return (
-    <div>
-      <div className="bg-white py-24">
+
+      <div>
         <DataLoading isLoading={isLoading}>
           <div
             className={`pokemon-info ${typePokemon?.slice(0, 1) ? typePokemon?.slice(0, 1) : typePokemon?.slice(1)}`}
@@ -181,7 +181,7 @@ const PokemonDetail = () => {
             </div>
           </div>
         </DataLoading>
-      </div>
+   
 
       {openModal && (
         <ModalCatchup

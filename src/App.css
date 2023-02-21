@@ -332,6 +332,43 @@ td.abilities {
     text-transform: capitalize;
 }
 
+/* modal css */
+
+.modal-box {
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.modal-bg {
+  background-color: rgb(107 114 128 / 0.75);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.modal-content {
+  overflow-y: hidden;
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.modal-content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
 @media only screen and (min-width: 992px) {
   main > .container {
     width: 90%;
@@ -359,6 +396,9 @@ td.abilities {
   }
   .info-block-2 {
     margin-top: -37px;
+  }
+  .modal-content {
+    padding: 0;
   }
 }
 
