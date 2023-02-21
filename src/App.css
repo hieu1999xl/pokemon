@@ -369,6 +369,15 @@ td.abilities {
   min-height: 100%;
 }
 
+.modal-content--block {
+  background-color: rgb(255 255 255 / 1);
+  box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
 @media only screen and (min-width: 992px) {
   main > .container {
     width: 90%;
@@ -397,8 +406,16 @@ td.abilities {
   .info-block-2 {
     margin-top: -37px;
   }
+  
+}
+
+@media   (min-width: 640px) {
   .modal-content {
     padding: 0;
+  }
+  .modal-content--block {
+    width: 100%;
+    max-width: 32rem;
   }
 }
 
