@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/pokemon/static/css/main.1abdac1a.css",
+    "main.js": "/pokemon/static/js/main.5b3de35e.js",
+    "static/js/953.092bfba9.chunk.js": "/pokemon/static/js/953.092bfba9.chunk.js",
+    "static/js/932.c87ea12a.chunk.js": "/pokemon/static/js/932.c87ea12a.chunk.js",
+    "static/js/400.ae7f1cbf.chunk.js": "/pokemon/static/js/400.ae7f1cbf.chunk.js",
+    "static/js/787.ab378faf.chunk.js": "/pokemon/static/js/787.ab378faf.chunk.js",
+    "static/js/87.439c1c14.chunk.js": "/pokemon/static/js/87.439c1c14.chunk.js",
+    "static/media/poke-catch-fail.gif": "/pokemon/static/media/poke-catch-fail.d8ed5e560365d021c1ec.gif",
+    "static/media/poke-catch-success.gif": "/pokemon/static/media/poke-catch-success.66cbb3794aad99380f0e.gif",
+    "static/media/poke-throw.gif": "/pokemon/static/media/poke-throw.730ee725d0b8cead4f6c.gif",
+    "index.html": "/pokemon/index.html",
+    "main.1abdac1a.css.map": "/pokemon/static/css/main.1abdac1a.css.map",
+    "main.5b3de35e.js.map": "/pokemon/static/js/main.5b3de35e.js.map",
+    "953.092bfba9.chunk.js.map": "/pokemon/static/js/953.092bfba9.chunk.js.map",
+    "932.c87ea12a.chunk.js.map": "/pokemon/static/js/932.c87ea12a.chunk.js.map",
+    "400.ae7f1cbf.chunk.js.map": "/pokemon/static/js/400.ae7f1cbf.chunk.js.map",
+    "787.ab378faf.chunk.js.map": "/pokemon/static/js/787.ab378faf.chunk.js.map",
+    "87.439c1c14.chunk.js.map": "/pokemon/static/js/87.439c1c14.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1abdac1a.css",
+    "static/js/main.5b3de35e.js"
+  ]
+}
