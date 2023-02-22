@@ -15,12 +15,12 @@ const Modal = ({ children, openModal, onClose }: ModalProps) => {
       <Dialog as="div" className="modal-box" initialFocus={cancelButtonRef} onClose={onClose}>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+          enter="transition"
+          enterFrom="opa-0"
+          enterTo="opa"
+          leave="leave-modal"
+          leaveFrom="opa"
+          leaveTo="opa-0"
         >
           <div className="modal-bg inset" />
         </Transition.Child>
@@ -29,12 +29,12 @@ const Modal = ({ children, openModal, onClose }: ModalProps) => {
           <div className="modal-content">
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              enter="transition"
+              enterFrom="opa-0 tranlate "
+              enterTo="opa translate-y-0 "
+              leave="leave-modal"
+              leaveFrom="opa translate-y-0"
+              leaveTo="opacity-0 tranlate"
             >
               <Dialog.Panel className="modal-content--block">
                 {children}

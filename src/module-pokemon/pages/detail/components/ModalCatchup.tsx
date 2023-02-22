@@ -35,19 +35,19 @@ const ModalCatchup = ({
   return (
     <Modal openModal={openModal} onClose={onCloseCatchUp}>
       <div className="bg-white">
-        <div className="sm:flex sm:items-start relative flex">
-          <LazyLoadImage src={pokeAdmin} width="100%" className="smS:w-[500px]" />
+        <div className="catch-item">
+          <LazyLoadImage src={pokeAdmin} width="100%" className="loading-img" />
 
           <LazyLoadImage
             src={`${IMAGE_URL}/${pokemonData.id}.png`}
             style={{
               display: canCatchUp && pokeAdmin == imgPokeCatchSuccess ? 'block' : 'none',
             }}
-            className="absolute bottom-[20%] left-[40%] w-[30%] smS:w-[150px]"
+            className="lazyload-img"
           />
           {[imgPokeCatchSuccess, imgPokeCatchFail].includes(pokeAdmin) && (
-            <div className="absolute text-center w-full bottom-0">
-              <h2 className="text-3xl font-bold tracking-tight text-rose-600 sm:text-4xl">
+            <div className="catch-text">
+              <h2 className="catch-content">
                 {canCatchUp ? 'Caught' : "Can't catch"}
               </h2>
             </div>
