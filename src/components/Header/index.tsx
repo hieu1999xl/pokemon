@@ -91,7 +91,8 @@ const Header = () => {
             <a href="#email"><span className="white-text email">meiiforjob@gmail.com</span></a>
           </div></li>
         <li><a target="_blank" href="https://www.linkedin.com/in/nguyen-dang-hieu-1975921b1/"><i className="material-icons">cloud</i>Linkedin</a></li>
-        <li><a href="https://github.com/hieu1999xl">Github</a></li>
+        <li><a target="_blank" href="https://github.com/hieu1999xl">Github</a></li>
+        <li><a target="_blank" href="https://hieu1999xl.github.io/html/">My website (pure html css)</a></li>
         <li><div className="divider" /></li>
         <li><NavLink className="waves-effect"
               to="/"

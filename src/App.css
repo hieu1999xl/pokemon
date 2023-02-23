@@ -369,6 +369,127 @@ td.abilities {
   min-height: 100%;
 }
 
+.modal-content--block {
+  background-color: rgb(255 255 255 / 1);
+  box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.transition {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.opa-0  {
+  opacity: 0;
+}
+
+.opa {
+  opacity: 1;
+}
+
+.leave-modal {
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.tranlate {
+  transform: translateX(1rem);
+}
+
+.bg-white {
+  background:  white;
+}
+
+.catch-item {
+  position: relative;
+  display: flex;
+  align-items: start;
+}
+
+.lazyload-img {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  left: 40%;
+  width: 30%;
+}
+
+.catch-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.catch-content {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: red;
+}
+
+.modal-delete--content {
+  margin-top: 0.75rem;
+  text-align: left;;
+}
+
+.modal-delete--text {
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: rgb(17 24 39 / 1);
+}
+
+.modal-delete--subtext {
+  color: rgb(107 114 128 / 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.mt2 {
+  margin-top: 1.25rem;
+}
+.mr2 {
+  margin-right: 1.25rem;
+}
+
+.modal-delete--btn {
+  padding-right: 1rem; 
+  padding-left: 1rem;
+  padding-top: 0.75rem; 
+  padding-bottom: 0.75rem;
+  background-color: rgb(249 250 251 / 1);
+}
+
+.modal-pokemon {
+  padding-right: 1rem; 
+  padding-left: 1rem;
+  padding-top: 1.25rem;
+}
+
+.modal-pokemon--flex{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-pokemon--jus{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-pokemon--owner {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  color: red;
+}
+
 @media only screen and (min-width: 992px) {
   main > .container {
     width: 90%;
@@ -397,8 +518,42 @@ td.abilities {
   .info-block-2 {
     margin-top: -37px;
   }
+  .lazyload-img {
+   width: 150px;
+  }
+  .modal-delete--content {
+    margin-top: 0;
+    text-align: center;
+    margin-left: 1rem;
+  }
+}
+
+@media   (min-width: 640px) {
   .modal-content {
     padding: 0;
+  }
+  .modal-content--block {
+    width: 100%;
+    max-width: 32rem;
+  }
+  .loading-img {
+    max-width: 500px;
+  }
+
+  .modal-delete {
+    display: flex;
+    align-items: start;
+    padding-left: 10px;
+  }
+
+  .modal-delete--btn {
+    flex-direction: row-reverse;
+    display: flex;
+  }
+
+  .modal-pokemon {
+    padding: 1.5rem;
+    padding-bottom: 1.25rem;
   }
 }
 
